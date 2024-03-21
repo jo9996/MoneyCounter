@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS PTI</title>
+    <link rel="stylesheet" href="outcome.css">
+</head>
+<body>
+    <div id="container">
+        <div id="top">
+            <div id="logo">
+                <img src="imgW/moneybag.png" width="75" height="75" />
+            </div>
+            <div id="text">
+                <p id='hellomsg'></p>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="main.html">Main</a></li>
+                    <li><a href="income.html">Income</a></li>
+                    <li><a class="active" href="outcome.html">Outcome</a></li>
+                    <li ><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="mid">
+            <h1 id="user_outcome"></h1>
+            <form action="main.html" method="POST">
+                <div id="midcontent">
+                    <label for="nama_trasaksi">Nama Transaksi</label>
+                    <input class="bar" type="text" id="nama_trasaksi">
+
+                    <label for="Jumlah_Transaksi">Jumlah Transaksi</label>
+                    <input class="bar" type="text" id="Jumlah_Transaksi">
+
+                    <label for="Jenis_Transaksi">Jenis Transaksi</label>
+                    <select class="bar" id="Jenis_Transaksi" name="Jenis Transaksi">
+                        <option value="Makan">Makan</option>
+                        <option value="Main">Main</option>
+                        <option value="Edukasi">Edukasi</option>
+                        <option value="Belanja">Belanja</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                    <button id="submit_input" type="submit">Tambahkan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        name_user = localStorage.getItem('name_user');
+        welcomemsg = document.getElementById('hellomsg');
+        welcomemsg.textContent = 'Hello, ' + name_user + '!';
+        userincome = document.getElementById('user_outcome');
+        userincome.textContent =  name_user + "'s " +'income';
+    </script>
+</body>
+</html> 

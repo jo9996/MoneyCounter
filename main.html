@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS PTI</title>
+    <link rel="stylesheet" href="mainpage.css">
+</head>
+<body>
+    <div id="container">
+        <div id="top">
+            <div id="logo">
+                <img src="imgW/moneybag.png" width="75" height="75" />
+            </div>
+            <div id="text">
+                <p id="hellomsg"></p>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a class="active" href="#">Main</a></li>
+                    <li><a href="income.html">Income</a></li>
+                    <li><a href="outcome.html">Outcome</a></li>
+                    <li ><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="mid">
+            <div id="midcontent">
+                <div class="box1">
+
+                </div>
+                <div class="box2">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        name_user = localStorage.getItem('name_user');
+        welcomemsg = document.getElementById('hellomsg');
+        welcomemsg.textContent = 'Hello, ' + name_user + '!';
+
+        function income(){
+            
+        }
+    </script>
+</body>
+</html> 
